@@ -239,7 +239,8 @@ ul a:hover {
     transition-duration: 0.3s;
     color: white;
 }
-#cuerpo{
+
+#cuerpo {
     background-color: #91cdff;
     display: flex;
     flex-direction: column;
@@ -247,27 +248,35 @@ ul a:hover {
     height: auto;
     color: aliceblue;
 }
-.chat{
-    width: 60%;
-    height: 300px;
+
+.chat {
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
 }
-.enviar{
+
+#barra {
+    width: 200px;
+    margin: 10px;
+}
+
+.enviar {
     background: white;
     color: #309ffa;
     border-radius: 10px;
-    
-    width: 200px;
+    width: 100px;
     height: 30px;
 }
-.enviar:hover{
+
+.enviar:hover {
     background: #309ffa;
     color: white;
 }
-#pie_pagina{
+
+#pie_pagina {
     background-color: #309ffa;
     color: white;
     width: 100%;
     height: 50px;
     text-align: center;
 }
-

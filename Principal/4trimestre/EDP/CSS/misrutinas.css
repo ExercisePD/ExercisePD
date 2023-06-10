@@ -239,7 +239,8 @@ ul a:hover {
     transition-duration: 0.3s;
     color: white;
 }
-#cuerpo{
+
+#cuerpo {
     background-color: #91cdff;
     display: flex;
     align-items: flex-start;
@@ -247,12 +248,13 @@ ul a:hover {
     height: 1200px;
     gap: 10px;
 }
-#cuerpo div a{
+
+#cuerpo div a {
     margin: 30px;
     background-color: #309ffa;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -260,16 +262,15 @@ ul a:hover {
     text-decoration: none;
     color: aliceblue;
     font-size: 50px;
-
-    
 }
-#cuerpo div a:hover{
+
+#cuerpo div a:hover {
     margin: 20px;
     background-color: #ffffff;
     transition-duration: 0.3s;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -277,8 +278,7 @@ ul a:hover {
     color: #309ffa;
 }
 
-
-#pie_pagina{
+#pie_pagina {
     background-color: #309ffa;
     color: white;
     width: 100%;
