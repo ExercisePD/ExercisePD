@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} 
+
+.foto1  {
+	margin: 100px; 
+	margin-top: 40px;
+	
+}
+h4{
+    font-size: 25px;
+    font-family: Arial;
+    color:black ;
+    text-align: center;
+}
+h5{
+	margin: 20px;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif ;
+    color:black ;
+    text-align: center;
+}
+#registrarse{
+    font-size: 20px;
+    font-family: Gill Sans;
+    color:#309ffa ;
+    text-align: center;
+}
+::placeholder{
+    font-size: 18px;
+    opacity: 80%;
+    color:black ;
+    text-align: center;
+}
+Body{background: #309ffa}
+
+.form-color{
+background-color: #309ffa;	
+}
+
+.form-register{
+	width: 400px;
+	background: #ffffff;
+	padding: 40px;
+	margin: auto;
+	margin-top: -65px;
+	border-radius: 25px;
+	font-family: "calibri";
+	color: white;
+	margin-bottom: 175px;
+
+}
+select{
+    width: 90%;
+    height: 25px;
+    margin: auto;
+    background: rgb(166, 209, 216);
+    border-radius: 3px;
+}
+.form-register h4 {
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+.cuadro {
+	width: 320px;
+	background: #ffffff;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 2px solid #309ffa;
+	font-family: "calibri";
+	font-size: 18px;
+}
+
+.form-register p {
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.form-register a {
+	color: white;
+	text-decoration: none;
+}
+
+.form-register a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+.form-register .ingresar {
+	width: 100%;
+	background: #309ffa;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+}
+.form-register .ingresar:hover {
+	width: 100%;
+	background: #2058e3;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+}

@@ -1,0 +1,176 @@
+body {
+    background: #8da3a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    background: #91cdff;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#cabecera {
+    background: #309ffa;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.hamburguesa1 {
+    display: grid;
+    grid-column: 9/10;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.hamburguesa {
+    grid-column: 9/10;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+ul {
+    display: none;
+}
+
+.hamburguesa input:checked~ul {
+    display: block;
+}
+
+.hamburguesa input {
+    display: none;
+}
+
+label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+}
+
+
+/* Estilo del boton cuando se pasa el mouse por encima*/
+
+label:hover {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 1px solid#ffffff;
+}
+
+
+/* Estilo del boton cuando el menú está expandido*/
+
+input:checked~label {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 1px solid#ffffff;
+}
+
+ul {
+    margin-top: 0;
+    padding: 0;
+    width: 200px;
+}
+
+ul a {
+    display: block;
+    background: #309ffa;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+
+ul a:hover {
+    filter: brightness(110%);
+    background: #309ffa;
+}
+
+.usuario {
+    width: 100%;
+    grid-column: 10/11;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.imgcasa {
+    width: 100%;
+    height: auto;
+    grid-column: 1/2;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+}
+
+#cuerpo{
+    background-color: #91cdff;
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: 100px 100px 100px 100px;
+    height: 1200px;
+    gap: 10px;
+}
+#pie_pagina{
+    background-color: #309ffa;
+    color: white;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+body{
+    background: #8da3a6;
+}
+#contenedorp{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    padding: 10px;
+    width: 98%;
+    height: 1000px;
+}
+#cuerpo{
+    background-color: #91cdff;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+}
+#cuerpo div{
+    background-color: #309ffa;
+    border-radius: 10px;
+    width: 20%;
+    height: auto;
+    padding: 10px;
+    
+}
+#cuerpo div p{
+    color: #000000;
+    
+    
+}
