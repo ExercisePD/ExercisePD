@@ -21,12 +21,15 @@ body {
     grid-template-columns: repeat(10, 1fr);
 }
 
+#cabecera img {
+    width: 70%;
+}
+
 .hamburguesa1 {
     display: grid;
     grid-column: 9/10;
     justify-items: center;
     align-items: center;
-    
 }
 
 .hamburguesa {
@@ -34,7 +37,6 @@ body {
     justify-items: center;
     align-items: center;
     margin: 0 auto;
-    
 }
 
 ul {
@@ -123,7 +125,7 @@ ul a:hover {
     align-items: center;
 }
 
-#cuerpo{
+#cuerpo {
     background-color: #91cdff;
     display: grid;
     grid-template-columns: repeat(1fr, 3);
@@ -131,7 +133,8 @@ ul a:hover {
     height: 1200px;
     gap: 10px;
 }
-#pie_pagina{
+
+#pie_pagina {
     background-color: #309ffa;
     color: white;
     width: 100%;
@@ -139,10 +142,11 @@ ul a:hover {
     text-align: center;
 }
 
-body{
+body {
     background: #8da3a6;
 }
-#cuerpo{
+
+#cuerpo {
     background-color: #91cdff;
     display: flex;
     flex-direction: column;
@@ -151,54 +155,75 @@ body{
     height: auto;
     gap: 30px;
 }
-.titulo{
+
+.titulo {
     background-color: #ffffff;
     border-radius: 10px;
-    
 }
-.texto{
+
+.texto {
     width: 40%;
     height: 40px;
     background: rgb(255, 255, 255);
     border-radius: 10px;
     border: 2px solid #309ffa;
-    
 }
-.texto:hover{
+
+.texto:hover {
     width: 40%;
     height: 40px;
-    
     background: rgb(221, 221, 221);
     border-radius: 10px;
     color: #414141;
     border: 2px solid #309ffa;
-    
 }
-#registrar{
+
+#registrar {
     width: 30%;
     height: 35px;
-    
     background: rgb(255, 255, 255);
-    border-radius:15px;
+    border-radius: 15px;
     border-width: 3px;
     border-style: solid;
     font-size: 15px;
     font-family: Arial;
-    color:#000000 ;
-    text-align: center; 
-
+    color: #000000;
+    text-align: center;
 }
-#registrar:hover{
+
+#registrar:hover {
     width: 30%;
     height: 35px;
-    
     background: #309ffa;
-    border-radius:15px;
+    border-radius: 15px;
     border-width: 3px;
     border-style: solid;
     font-size: 15px;
     font-family: Arial;
-    color:#ffffff ;
-    text-align: center; 
+    color: #ffffff;
+    text-align: center;
+}
 
+@media screen and (max-width: 720px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 50%;
+    }
+    #pie_pagina {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 70%;
+    }
+    #pie_pagina {
+        height: auto;
+    }
 }

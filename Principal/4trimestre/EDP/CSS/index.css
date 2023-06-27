@@ -21,6 +21,10 @@ body {
     grid-template-columns: repeat(10, 1fr);
 }
 
+#cabecera img {
+    width: 70%;
+}
+
 .hamburguesa1 {
     display: grid;
     justify-items: center;
@@ -209,6 +213,7 @@ ul a:hover {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    text-align: center;
 }
 
 .botoninforme:hover {
@@ -241,30 +246,30 @@ ul a:hover {
 }
 
 #cuerpo {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
 #buscador1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 1/4;
     margin: 10px;
+    width: 70%;
 }
 
 #buscador1 input {
     height: 50px;
-    width: 70%;
+    width: 100%;
     border-radius: 30px;
     text-align: center;
     background-color: white;
 }
-#Buscador-submit{
+
+#Buscador-submit {
     display: flex;
     align-items: center;
 }
-#Buscador-submit input{
+
+#Buscador-submit input {
     background: #309ffa;
     border-radius: 10px;
     width: 200px;
@@ -272,7 +277,8 @@ ul a:hover {
     color: #ffffff;
     font-size: larger;
 }
-#Buscador-submit input:hover{
+
+#Buscador-submit input:hover {
     background: #ffffff;
     border: 1px #309ffa;
     border-radius: 10px;
@@ -290,16 +296,74 @@ ul a:hover {
     border-radius: 30px;
     justify-content: end;
     text-align: center;
+    width: 23%;
 }
-#cuerpo article:hover{
+
+#cuerpo article:hover {
     background-color: #ffffff;
     color: #309ffa;
     transition-duration: 0.3s;
 }
-#pie_pagina{
+
+#pie_pagina {
     background-color: #309ffa;
     color: white;
     width: 100%;
-    height: 50px;
+    height: 125px;
     text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 50%;
+    }
+    .botoninicio {
+        font-size: small;
+    }
+    .botoninforme {
+        font-size: small;
+        text-align: center;
+    }
+    .botonagente {
+        font-size: small;
+    }
+    #buscador1 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 70%;
+    }
+    .botoninicio {
+        font-size: smaller;
+    }
+    .botoninforme {
+        font-size: smaller;
+        text-align: center;
+    }
+    .botonagente {
+        font-size: smaller;
+    }
+    #cuerpo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #buscador1 {
+        width: 50%;
+    }
+    #Buscador-submit {
+        margin: auto;
+        width: 30%;
+    }
+    #cuerpo article {
+        width: 40%;
+    }
 }

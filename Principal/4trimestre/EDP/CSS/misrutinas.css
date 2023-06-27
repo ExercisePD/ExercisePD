@@ -21,6 +21,10 @@ body {
     grid-template-columns: repeat(10, 1fr);
 }
 
+#cabecera img {
+    width: 70%;
+}
+
 .hamburguesa1 {
     display: grid;
     justify-items: center;
@@ -253,8 +257,8 @@ ul a:hover {
     margin: 30px;
     background-color: #309ffa;
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -269,8 +273,8 @@ ul a:hover {
     background-color: #ffffff;
     transition-duration: 0.3s;
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 210px;
+    height: 210px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -282,6 +286,44 @@ ul a:hover {
     background-color: #309ffa;
     color: white;
     width: 100%;
-    height: 50px;
+    height: 125px;
     text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 100%;
+    }
+    .botoninicio {
+        font-size: small;
+    }
+    .botoninforme {
+        font-size: small;
+        text-align: center;
+    }
+    .botonagente {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 70%;
+    }
+    .botoninicio {
+        font-size: smaller;
+    }
+    .botoninforme {
+        font-size: smaller;
+        text-align: center;
+    }
+    .botonagente {
+        font-size: smaller;
+    }
 }

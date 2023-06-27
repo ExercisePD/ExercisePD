@@ -21,6 +21,10 @@ body {
     grid-template-columns: repeat(10, 1fr);
 }
 
+#cabecera img {
+    width: 70%;
+}
+
 .hamburguesa1 {
     display: grid;
     grid-column: 9/10;
@@ -170,6 +174,60 @@ ul a:hover {
     background-color: #309ffa;
     color: white;
     width: 100%;
-    height: 50px;
+    height: 125px;
     text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 100%;
+    }
+    #cuerpo {
+        height: auto;
+    }
+    #cuerpo div a {
+        width: 150px;
+        height: 150px;
+    }
+    .botoninicio {
+        font-size: small;
+    }
+    .botoninforme {
+        font-size: small;
+        text-align: center;
+    }
+    .botonagente {
+        font-size: small;
+    }
+    #pie_pagina {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        height: auto;
+    }
+    #cuerpo {
+        height: auto;
+    }
+    #cabecera img {
+        width: 100%;
+    }
+    .botoninicio {
+        font-size: smaller;
+    }
+    .botoninforme {
+        font-size: smaller;
+        text-align: center;
+    }
+    .botonagente {
+        font-size: smaller;
+    }
+    #pie_pagina {
+        height: 125px;
+    }
 }

@@ -21,6 +21,10 @@ body {
     grid-template-columns: repeat(10, 1fr);
 }
 
+#cabecera img {
+    width: 70%;
+}
+
 .hamburguesa1 {
     display: grid;
     grid-column: 9/10;
@@ -121,15 +125,16 @@ ul a:hover {
     align-items: center;
 }
 
-#cuerpo{
+#cuerpo {
     background-color: #91cdff;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     height: 1200px;
     gap: 10px;
-}   
-#pie_pagina{
+}
+
+#pie_pagina {
     background-color: #309ffa;
     color: white;
     width: 100%;
@@ -137,81 +142,107 @@ ul a:hover {
     text-align: center;
 }
 
-#soporte{
+#soporte {
     width: 60px;
     height: 60px;
     object-fit: fill;
     object-position: center;
-    grid-column:1/2;
-    grid-row: 2/3; 
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
-.contenedorp{
+
+.contenedorp {
     display: grid;
     grid-column: 2/4;
-    grid-row:2/4;
+    grid-row: 2/4;
     width: 100%;
     height: auto;
-    
-    margin:auto;
-    background: #ffffff; ;
+    margin: auto;
+    background: #ffffff;
+    ;
     padding: 15px;
     border: 1px solid #ffffff;
     border-radius: 10px;
 }
-h3{
+
+h3 {
     font-size: 25px;
     font-family: Arial;
-    color:rgb(0, 0, 0) ;
-    text-align: center; 
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
-p{
+
+p {
     font-size: 15px;
     font-family: Arial;
-    color:rgb(0, 0, 0) ;
-    text-align: left; 
+    color: rgb(0, 0, 0);
+    text-align: left;
 }
-.Nombre{
+
+.Nombre {
     width: 95%;
     height: 30px;
-    
     background: rgb(255, 255, 255);
     border-radius: 5px;
     border: 2px solid #309ffa;
-    
 }
-.descripcion{
+
+.descripcion {
     width: 95%;
     height: 100px;
     margin-bottom: 8px;
     background: rgb(255, 255, 255);
     border-radius: 5px;
     border: 2px solid #309ffa;
-    
 }
-#registrar{
+
+#registrar {
     width: 40%;
     height: 35px;
     margin: auto;
     background: rgb(255, 255, 255);
-    border-radius:15px;
+    border-radius: 15px;
     border-width: 3px;
     border-style: solid;
     font-size: 15px;
     font-family: Arial;
     border: 2px solid #309ffa;
-    text-align: center; 
-
+    text-align: center;
 }
-#registrar:hover{
+
+#registrar:hover {
     width: 45%;
     height: 40px;
     background: #309ffa;
-    border-radius:15px;
+    border-radius: 15px;
     border-width: 3px;
     border-style: solid;
     font-size: 15px;
     font-family: Arial;
-    color:#ffffff ;
-    text-align: center; 
+    color: #ffffff;
+    text-align: center;
+}
 
+@media screen and (max-width: 750px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 100%;
+    }
+    #pie_pagina {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 70%;
+    }
+    #pie_pagina {
+        height: 125px;
+    }
 }

@@ -21,12 +21,15 @@ body {
     grid-template-columns: repeat(10, 1fr);
 }
 
+#cabecera img {
+    width: 70%;
+}
+
 .hamburguesa1 {
     display: grid;
     grid-column: 9/10;
     justify-items: center;
     align-items: center;
-    
 }
 
 .hamburguesa {
@@ -34,7 +37,6 @@ body {
     justify-items: center;
     align-items: center;
     margin: 0 auto;
-    
 }
 
 ul {
@@ -123,7 +125,7 @@ ul a:hover {
     align-items: center;
 }
 
-#cuerpo{
+#cuerpo {
     background-color: #91cdff;
     display: grid;
     grid-template-columns: repeat(1fr, 3);
@@ -131,7 +133,8 @@ ul a:hover {
     height: 1200px;
     gap: 10px;
 }
-#pie_pagina{
+
+#pie_pagina {
     background-color: #309ffa;
     color: white;
     width: 100%;
@@ -139,10 +142,11 @@ ul a:hover {
     text-align: center;
 }
 
-body{
+body {
     background: #8da3a6;
 }
-#contenedorp{
+
+#contenedorp {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
@@ -151,73 +155,74 @@ body{
     width: 98%;
     height: 1000px;
 }
-#logo{
+
+#logo {
     width: 60px;
     height: 60px;
     object-fit: fill;
     object-position: center;
-    grid-column:1/2;
-    grid-row: 2/3; 
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
-#registro{
+
+#registro {
     display: grid;
     grid-column: 2/3;
-    grid-row:2/3;
+    grid-row: 2/3;
     width: 100%;
-    margin:auto;
-    background: #ffffff; ;
+    margin: auto;
+    background: #ffffff;
+    ;
     padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 10px;
 }
 
-
-
-h3{
+h3 {
     font-size: 25px;
     font-family: Arial;
-    color:rgb(0, 0, 0) ;
-    text-align: center; 
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 
-#registrar{
+#registrar {
     width: 40%;
     height: 35px;
     margin: auto;
     background: rgb(255, 255, 255);
-    border-radius:15px;
+    border-radius: 15px;
     border-width: 3px;
     border-style: solid;
     font-size: 15px;
     font-family: Arial;
-    color:#000000 ;
-    text-align: center; 
-
+    color: #000000;
+    text-align: center;
 }
-#registrar:hover{
+
+#registrar:hover {
     width: 45%;
     height: 40px;
     margin: auto;
     background: #309ffa;
-    border-radius:15px;
+    border-radius: 15px;
     border-width: 3px;
     border-style: solid;
     font-size: 15px;
     font-family: Arial;
-    color:#ffffff ;
-    text-align: center; 
-
+    color: #ffffff;
+    text-align: center;
 }
-.texto{
+
+.texto {
     width: 95%;
     height: 40px;
     margin: 10px;
     background: rgb(255, 255, 255);
     border-radius: 10px;
     border: 2px solid #309ffa;
-    
 }
-.texto:hover{
+
+.texto:hover {
     width: 95%;
     height: 40px;
     margin: 10px;
@@ -225,28 +230,55 @@ h3{
     border-radius: 10px;
     color: #414141;
     border: 2px solid #309ffa;
-    
 }
-select{
+
+select {
     width: 90%;
     height: 25px;
     margin: auto;
     background: rgb(166, 209, 216);
     border-radius: 3px;
 }
-#terminos{
+
+#terminos {
     font-size: 15px;
     font-family: Arial;
-    color:#309ffa;
-    text-align: center; 
+    color: #309ffa;
+    text-align: center;
+}
 
-}
-select{
+select {
     text-align: center;
 }
-a{
+
+a {
     text-align: center;
 }
-#terminos{
+
+#terminos {
     text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 100%;
+    }
+    #pie_pagina {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        height: auto;
+    }
+    #cabecera img {
+        width: 70%;
+    }
+    #pie_pagina {
+        height: 125px;
+    }
 }
