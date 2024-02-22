@@ -1,12 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Modal } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import Discapa from "./Discapacidad"
+import Notifi from "./Notificacion"
+import Rut from "./Rutina"
+import casa from "./assets/casita.png"
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import Discapa from "./src/components/Discapacidad"
-import Notifi from "./src/components/Notificacion"
-import Rut from "./src/components/Rutina"
+const Tab = createBottomTabNavigator();
 
-const Stack = createStackNavigator();
+const LogoutScreen = ({ navigation }) => (
+  <View style={styles.container}>
+    <Text style={styles.X}>Estás seguro de que deseas cerrar la sesión?</Text>
+    <TouchableOpacity onPress={() => {
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Login' }],
+      });
+    }}>
+      <Text style={styles.logoutButtonText}>Cerrar Sesión</Text>
+    </TouchableOpacity>
+  </View>
+);
 
 const HomeScreen = ({ navigation }) => (
   <View style={styles.container}>
@@ -94,24 +108,81 @@ const Notificacion = () => (
 );
 
 const App = () => (
-  <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{ headerShown: false }}
+<Tab.Navigator screenOptions={{headerShown: false,}}>
+  <Tab.Screen
+    name="Inicio"
+    component={HomeScreen}
+    options={{
+      tabBarIcon: ({ focused }) => (
+        <Image
+          source={focused ? require('./assets/casita.png') : require('./assets/casita.png')}
+          style={{ width: 35, height: 35 }}
+        />
+      )
+    }}
+  />
+  <Tab.Screen
+    name="Perfil"
+    component={Perfil}
+    options={{
+      tabBarIcon: ({ focused }) => (
+        <Image
+          source={focused ? require('./assets/usuario.png') : require('./assets/usuario.png')}
+          style={{ width: 35, height: 35 }}
+        />
+      )
+    }}
+  />
+  <Tab.Screen
+    name="Discapacidad"
+    component={Discapacidad}
+    options={{
+      tabBarIcon: ({ focused }) => (
+        <Image
+          source={focused ? require('./assets/ExercisePD.png') : require('./assets/ExercisePD.png')}
+          style={{ width: 35, height: 35 }}
+        />
+      )
+    }}
+  />
+  <Tab.Screen
+    name="Rutina"
+    component={Rutina}
+    options={{
+      tabBarIcon: ({ focused }) => (
+        <Image
+          source={focused ? require('./assets/Rutina.png') : require('./assets/Rutina.png')}
+          style={{ width: 35, height: 35 }}
+        />
+      )
+    }}
+  />
+  <Tab.Screen
+    name="Notificacion"
+    component={Notificacion}
+    options={{
+      tabBarIcon: ({ focused }) => (
+        <Image
+          source={focused ? require('./assets/Campana.png') : require('./assets/Campana.png')}
+          style={{ width: 35, height: 35}}
+        />
+      )
+    }}
+  />
+  <Tab.Screen
+        name="Cerrar Sesión"
+        component={LogoutScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={focused ? require('./assets/X.png') : require('./assets/X.png')}
+              style={{ width: 35, height: 35 }}
+            />
+          )
+        }}
       />
-      <Stack.Screen name="LeftScreen" 
-      component={LeftScreen} 
-      options={{ headerShown: false }}
-      />
-      <Stack.Screen name="Perfil" 
-      component={Perfil} />
-      <Stack.Screen name="Discapacidad" component={Discapacidad} />
-      <Stack.Screen name="Rutina" component={Rutina} />
-      <Stack.Screen name="Notificacion" component={Notificacion} />
-    </Stack.Navigator>
-  </NavigationContainer>
+</Tab.Navigator>
+
 );
 
 const styles = StyleSheet.create({
@@ -148,7 +219,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     flex: 1,
     margin: 20,
-    marginBottom: 60,
+    marginBottom: 120,
   },
   buttonWithText: {
     flexDirection: 'row',
@@ -169,6 +240,14 @@ const styles = StyleSheet.create({
   },
   circleText: {
     fontSize: 18,
+    textAlign: 'center',
+  },
+  logoutButtonText: {
+    fontSize: 30,
+    textAlign: 'center',
+  },
+  X: {
+    fontSize: 30,
     textAlign: 'center',
   },
 });

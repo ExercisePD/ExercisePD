@@ -1,65 +1,64 @@
 import React, { useState } from "react";
-import {Modal, Text, Button, StyleSheet, View, TextInput, ScrollView, Pressable, Alert} from "react-native";
+import { Text, Button, StyleSheet, View, TextInput, ScrollView, Pressable, Alert } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
-const Formulario = ({modalVisible, setModalVisible}) => {
+const Formulario = () => {
   const [Usuario, setUsuario] = useState("");
   const [Clave, setClave] = useState("");
   const [Clave2, setClave2] = useState("");
   const [Email, setEmail] = useState("");
-  const [Documento, setDocumento] = useState("");
   const [Telefono, setTelefono] = useState("");
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
+  const navigation = useNavigation();
 
-const handleCita=()=>{
-  if ([Usuario,Clave,Email,Telefono,Clave2, Documento].includes('')){
-    Alert.alert(
-      'Error',
-      'Todos los campos son obligatorios'
-    )
-    return
+  const handleCita = () => {
+    if ([Usuario, Clave, Email, Telefono, Clave2].includes('')) {
+      Alert.alert(
+        'Error',
+        'Todos los campos son obligatorios'
+      )
+      return
     }
 
     if (Clave !== Clave2) {
       Alert.alert("Error", "Las contraseñas no coinciden");
       return;
     }
-  const nuevoPaciente={
-    id: Date.now(),
-    Usuario,
-    Clave,
-    Email,
-    Documento,
-    Telefono,
-    Clave2,
-  }
-  setPacientes([...pacientes, nuevoPaciente])
-  setModalVisible(!modalVisible)
 
-  setPaciente('')
-  setClave('')
-  setEmail('')
-  setTelefono('')
-  setClave2('')
-}
+    const nuevoPaciente = {
+      id: Date.now(),
+      Usuario,
+      Clave,
+      Email,
+      Telefono,
+      Clave2
+    }
+    setPacientes([...pacientes, nuevoPaciente])
+    navigation.navigate('Login');
+  }
+
+  const handleCancel = () => {
+    navigation.navigate('Login');
+  }
 
   return (
-    <Modal animationType="slide" visible={modalVisible}>
-      <View style={styles.contenido}>
-        <ScrollView>
-          <Text style={styles.titulo}>
-            Nuevo {""}
-            <Text style={styles.tituloBold}>Usuario</Text>
-          </Text>
+    <View style={styles.contenido}>
+      <ScrollView>
+        <Text style={styles.titulo}>
+          Nuevo {""}
+          <Text style={styles.tituloBold}>Usuario</Text>
+        </Text>
 
-          <Pressable
-            style={styles.btn}
-            onPress={() => setModalVisible(!modalVisible)}
-          >
-            <Text style={styles.btnTexto}>X Cancelar</Text>
-          </Pressable>
+        <Pressable
+          style={styles.btn}
+          onPress={handleCancel}
+        >
+          <Text style={styles.btnTexto}>X Cancelar</Text>
+        </Pressable>
 
-          <View style={styles.campo}>
+       
+        <View style={styles.campo}>
             <Text style={styles.label}>
               Nombre del Usuario
               </Text>
@@ -80,7 +79,6 @@ const handleCita=()=>{
                 style={styles.input}
                 placeholder="Email"
                 placeholderTextColor={"#666"}
-                keyboardType="Email-address"
                 value={Email}
                 onChangeText={setEmail}
               />
@@ -93,8 +91,7 @@ const handleCita=()=>{
                 style={styles.input}
                 placeholder="Documento"
                 placeholderTextColor={"#666"}
-                value={Documento}
-                onChangeText={setDocumento}
+                value={Email}
               />
           </View>
 
@@ -151,12 +148,11 @@ const handleCita=()=>{
             </Pressable>
           </View>
 
-          <Pressable style={styles.btn2} onPress={handleCita}>
-            <Text style={styles.btnTexto2}>Registrarse</Text>
-          </Pressable>
-        </ScrollView>
-      </View>
-    </Modal>
+        <Pressable style={styles.btn2} onPress={handleCita}>
+          <Text style={styles.btnTexto2}>Registrarse</Text>
+        </Pressable>
+      </ScrollView>
+    </View>
   );
 };
 
@@ -167,13 +163,13 @@ const styles = StyleSheet.create({
   },
   titulo: {
     fontSize: 30,
-    
+    fontWeight: "600",
     textAlign: "center",
     marginTop: 30,
     color: "#fff",
   },
   tituloBold: {
-    
+    fontWeight: "900",
   },
   campo: {
     marginTop: 10,
@@ -185,7 +181,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontSize: 20,
     textAlign: "center",
-    
+    fontWeight: "600",
   },
   input: {
     backgroundColor: "#FFF",
@@ -204,9 +200,8 @@ const styles = StyleSheet.create({
   btnTexto: {
     color: "#FFF",
     textAlign: "center",
-    
+    fontWeight: "900",
     fontSize: 16,
-    textTransform: "uppercase,",
   },
   btn2: {
     marginVertical: 50,
@@ -218,8 +213,7 @@ const styles = StyleSheet.create({
   btnTexto2: {
     textAlign: 'center',
     color: '#FFF',
-    textTransform: 'uppercase',
-    
+    fontWeight: '900',
     fontSize: 16,
   },
   togglePasswordButton: {

@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "indexadmin",
-    "slug": "snack-a49c4844-c8a0-496e-9b3b-25d5da1b2584",
+    "name": "proyecto-app-movil-login_registro",
+    "slug": "snack-5409c11a-ee88-46ad-94a9-d5ca010556ec",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
