@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Modal } from 'react-native';
-import Discapa from "./Discapacidad"
-import Notifi from "./Notificacion"
-import Rut from "./Rutina"
+import Discapa from "./AGR-Discapacidad"
+import Notifi from "./AGR-Notificacion"
+import Rut from "./AGR-Rutina"
 import casa from "./assets/casita.png"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';

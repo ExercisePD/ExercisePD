@@ -4,9 +4,9 @@ import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from "./src/component/Login";
 import RegisterScreen from './src/component/formulario';  
 import HomeScreen from './src/component/menu';
-import NotificationsScreen from './src/component/Notificacion';
-import DisabilitiesScreen from './src/component/Discapacidad';
-import RoutineScreen from "./src/component/Rutina";
+import NotificationsScreen from './src/component/AGR-Notificacion';
+import DisabilitiesScreen from './src/component/AGR-Discapacidad';
+import RoutineScreen from "./src/component/AGR-Rutina";
 
 const Stack = createNativeStackNavigator();
 
